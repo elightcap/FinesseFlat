@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="finesseflat.MVVM.View.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:finesseflat.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="0,-10,0,49"
+                    VerticalAlignment="Bottom">
+            <TextBox VerticalAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Margin="5"
+                     Grid.Column="1"
+                     Name="UsernameSetting"
+                     Style="{StaticResource ModernTextBox}">
+            </TextBox>
+            <TextBox VerticalAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Margin="5"
+                     Grid.Column="1"
+                     Name="ExtensionSetting"
+                     Style="{StaticResource ModernTextBox}">
+            </TextBox>
+            <TextBox VerticalAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Margin="5"
+                     Grid.Column="1"
+                     Name="UIDSetting"
+                     Style="{StaticResource ModernTextBox}">
+            </TextBox>
+        </StackPanel>
+        <Button x:Name="ApplyConfig"
+                Content="Apply Config"
+                Grid.Row="1"
+                Margin="38,10,179,185"
+                Width="Auto"
+                Style="{StaticResource ButtonTheme}"
+                Click="ApplyConfig_OnClick"/>
+
+    </Grid>
+</UserControl>
